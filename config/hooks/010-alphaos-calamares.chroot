@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+if [ -f /etc/calamares/settings.conf ]; then
+    sed -i 's/^branding:[[:space:]]*.*/branding: alphaos/' /etc/calamares/settings.conf
+fi
+mkdir -p /etc/calamares/branding/alphaos
+cp -a /usr/local/share/alphaos-calamares/. /etc/calamares/branding/alphaos/

@@ -1,0 +1,26 @@
+AlphaOS observed image tree
+|-- EFI
+|   `-- boot
+|       |-- bootx64.efi
+|       `-- grubx64.efi
+|-- boot
+|   `-- grub
+|       |-- config.cfg
+|       |-- efi.img
+|       |-- grub.cfg
+|       |-- live-theme
+|       |   `-- theme.txt
+|       |-- loopback.cfg
+|       |-- splash.png
+|       |-- theme.cfg
+|       |-- unicode.pf2
+|       `-- x86_64-efi/
+|-- boot.catalog
+|-- efi.img
+|-- live
+|   |-- filesystem.packages
+|   |-- filesystem.squashfs
+|   |-- initrd.img-6.12.101+deb13-amd64
+|   `-- vmlinuz-6.12.101+deb13-amd64
+|-- sha256sum.README
+`-- sha256sum.txt

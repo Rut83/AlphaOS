@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Install AlphaOS
+Comment=Install AlphaOS to your computer
+Exec=calamares
+Icon=/usr/share/pixmaps/alphaos-logo.svg
+Terminal=false
+Categories=System;

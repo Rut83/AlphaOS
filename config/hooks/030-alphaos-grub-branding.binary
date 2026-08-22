@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+# Keep live-build's generated GRUB logic intact. Branding assets can be added here
+# without hard-coding an installed-disk UUID.
+exit 0

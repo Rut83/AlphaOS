@@ -1,0 +1,67 @@
+# live-build generated state
+/.build/
+/cache/
+/chroot/
+/binary/
+/tftpboot/
+/.stage/
+/stages/
+
+# Generated ISO/images and checksums
+*.iso
+*.iso.hybrid
+*.img
+*.raw
+*.qcow2
+*.qcow
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.sha256
+*.md5
+
+# Build logs and local output
+*.log
+build.log
+*.pid
+
+# QEMU/UEFI test state
+OVMF_VARS*.fd
+*.nvram
+
+# Temporary mounts/extractions
+/mnt/
+/tmp/
+/extracted/
+/squashfs-root/
+
+# Package/build caches
+*.deb
+*.udeb
+*.dsc
+*.changes
+*.buildinfo
+
+# Editor/OS files
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets/local overrides
+.env
+.env.*
+!.env.example
+
+# Git tooling
+*.orig
+*.rej

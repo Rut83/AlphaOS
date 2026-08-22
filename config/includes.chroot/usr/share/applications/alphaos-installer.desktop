@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Install AlphaOS
+Comment=Install AlphaOS to your disk
+Exec=pkexec calamares
+Icon=calamares
+Terminal=false
+Categories=System;

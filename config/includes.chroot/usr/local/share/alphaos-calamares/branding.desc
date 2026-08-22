@@ -1,0 +1,23 @@
+---
+componentName: alphaos
+welcomeStyleCalamares: false
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 900px,600px
+windowPlacement: center
+sidebar: widget
+navigation: widget
+strings:
+  productName: AlphaOS
+  shortProductName: AlphaOS
+  version: "1.0"
+  shortVersion: "1"
+  versionedName: "AlphaOS 1.0"
+  shortVersionedName: "AlphaOS"
+  versionedBootloaderEntryName: "AlphaOS"
+  productUrl: "https://alphaos.dev"
+style:
+  SidebarBackground: "#071321"
+  SidebarText: "#FFFFFF"
+  SidebarTextCurrent: "#FFFFFF"
+  SidebarBackgroundCurrent: "#1687FF"

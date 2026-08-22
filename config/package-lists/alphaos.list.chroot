@@ -1,0 +1,49 @@
+# AlphaOS desktop
+live-boot
+live-config
+systemd-sysv
+network-manager
+network-manager-gnome
+sudo
+locales
+keyboard-configuration
+console-setup
+
+# XFCE desktop
+xfce4
+xfce4-goodies
+xfce4-terminal
+thunar
+thunar-archive-plugin
+thunar-volman
+lightdm
+lightdm-gtk-greeter
+
+# Applications
+firefox-esr
+mousepad
+ristretto
+
+# Installer
+calamares
+calamares-settings-debian
+
+# Hardware / tools
+firmware-linux
+firmware-linux-nonfree
+fastfetch
+curl
+wget
+ca-certificates
+pciutils
+usbutils
+lshw
+parted
+gdisk
+dosfstools
+e2fsprogs
+btrfs-progs
+ntfs-3g
+udisks2
+polkitd
+pkexec

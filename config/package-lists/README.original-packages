@@ -1,0 +1,3 @@
+Copy the package names from the original ISO's `live/filesystem.packages`
+here after inspecting that file. Do not paste Debian package metadata or
+versions unless you deliberately want version pinning.

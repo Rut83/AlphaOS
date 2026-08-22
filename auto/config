@@ -1,0 +1,21 @@
+#!/bin/sh
+set -eu
+
+lb config noauto \
+    --distribution trixie \
+    --architectures amd64 \
+    --binary-images iso-hybrid \
+    --bootloaders grub-efi \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --chroot-filesystem squashfs \
+    --compression xz \
+    --initramfs live-boot \
+    --linux-flavours amd64 \
+    --debian-installer false \
+    --apt-recommends true \
+    --memtest none \
+    --iso-application "AlphaOS" \
+    --iso-publisher "AlphaOS Project" \
+    --iso-volume "ALPHAOS" \
+    --checksums sha256 \
+    --bootappend-live "boot=live components quiet splash live-config.hostname=alpha live-config.username=alpha live-config.user-fullname=Alpha"

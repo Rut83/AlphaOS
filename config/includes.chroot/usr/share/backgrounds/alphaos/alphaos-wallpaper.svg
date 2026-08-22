@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#020816"/><stop offset=".55" stop-color="#061b35"/><stop offset="1" stop-color="#02050b"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#1687ff" stop-opacity=".35"/><stop offset="1" stop-color="#1687ff" stop-opacity="0"/></radialGradient>
+ <linearGradient id="mount" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#172c42"/><stop offset="1" stop-color="#03070d"/></linearGradient>
+</defs>
+<rect width="3840" height="2160" fill="url(#sky)"/><circle cx="1900" cy="850" r="900" fill="url(#glow)"/>
+<g fill="#fff" opacity=".72"><circle cx="260" cy="260" r="3"/><circle cx="620" cy="420" r="4"/><circle cx="990" cy="190" r="3"/><circle cx="1370" cy="350" r="4"/><circle cx="1760" cy="180" r="3"/><circle cx="2220" cy="290" r="3"/><circle cx="2640" cy="160" r="4"/><circle cx="3010" cy="420" r="3"/><circle cx="3430" cy="230" r="4"/><circle cx="3600" cy="640" r="3"/></g>
+<path d="M0 1800 500 1260 760 1510 1240 970 1640 1480 2070 1040 2540 1570 3000 1120 3420 1500 3840 1180V2160H0Z" fill="url(#mount)"/>
+<path d="M0 1880 530 1450 820 1710 1240 1240 1640 1640 2070 1300 2540 1710 3020 1370 3420 1680 3840 1400V2160H0Z" fill="#01040a" opacity=".92"/>
+<g transform="translate(1920 1010)"><path d="M-180 300 0-90 180 300h-52L0 90l-128 210Z" fill="#1687ff"/><path d="M-55 190 0 75l55 115Z" fill="#020816"/><text x="0" y="470" text-anchor="middle" font-family="sans-serif" font-size="112" letter-spacing="28" fill="#f5f8ff">ALPHA</text></g>
+</svg>

@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+# Remove Debian live installer desktop launchers if present.
+rm -f /usr/share/applications/live-installer.desktop
+rm -f /usr/share/applications/debian-installer.desktop
+rm -f /usr/share/applications/calamares-install-debian.desktop
+
+# Remove Debian installer shortcuts from /etc/skel if present.
+find /etc/skel -type f -name '*.desktop' \
+    -exec grep -Il 'Install Debian' {} \; 2>/dev/null |
+while read -r file; do
+    rm -f "$file"
+done
+
+# Remove Debian branding shortcuts from the live user's desktop
+# if live-build/live-config has created them at build time.
+rm -f /etc/skel/Desktop/*debian*.desktop 2>/dev/null || true
+rm -f /etc/skel/Desktop/*Debian*.desktop 2>/dev/null || true

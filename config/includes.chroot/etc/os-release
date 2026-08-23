@@ -1,0 +1,11 @@
+NAME="AlphaOS"
+PRETTY_NAME="AlphaOS moyo"
+ID=alphaos
+ID_LIKE=debian
+VERSION_ID="1.0"
+VERSION="1.0 (moyo)"
+VERSION_CODENAME=moyo
+CODENAME=moyo
+HOME_URL="https://alphaos.dev/"
+SUPPORT_URL="https://alphaos.dev/"
+BUG_REPORT_URL="https://alphaos.dev/"

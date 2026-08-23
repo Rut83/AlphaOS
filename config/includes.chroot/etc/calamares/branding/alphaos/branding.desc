@@ -1,23 +1,36 @@
 ---
 componentName: alphaos
+
 welcomeStyleCalamares: false
 welcomeExpandingLogo: true
+
 windowExpanding: normal
 windowSize: 900px,600px
 windowPlacement: center
+
 sidebar: widget
 navigation: widget
+
 strings:
-  productName: AlphaOS
-  shortProductName: AlphaOS
+  productName: "AlphaOS"
+  shortProductName: "AlphaOS"
   version: "1.0"
   shortVersion: "1"
-  versionedName: "AlphaOS 1.0"
-  shortVersionedName: "AlphaOS"
-  versionedBootloaderEntryName: "AlphaOS"
-  productUrl: "https://alphaos.dev"
+  versionedName: "AlphaOS moyo"
+  shortVersionedName: "AlphaOS moyo"
+  bootloaderEntryName: "AlphaOS"
+  versionedBootloaderEntryName: "AlphaOS moyo"
+
+images:
+  productLogo: "logo-256.png"
+  productIcon: "logo-no-background.png"
+  productWelcome: "logo-256.png"
+
 style:
   SidebarBackground: "#071321"
   SidebarText: "#FFFFFF"
   SidebarTextCurrent: "#FFFFFF"
   SidebarBackgroundCurrent: "#1687FF"
+
+slideshow: "show.qml"
+slideshowAPI: 2

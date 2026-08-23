@@ -1,0 +1,5 @@
+The real AlphaOS logo was supplied as a raster JPG (logo.jpg), not a vector.
+There is currently no SVG source for it — logo-256/128/64.png and
+plymouth-logo.png are all resized from that raster. If a scalable version is
+ever needed (very large displays, print, etc.), it'll need to be traced/redrawn
+as a vector from the original.

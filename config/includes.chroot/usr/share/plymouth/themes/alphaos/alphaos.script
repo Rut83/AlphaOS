@@ -1,0 +1,37 @@
+logo = Image("alphaos-logo.png");
+
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+/* Maximum logo size */
+max_width = 220;
+max_height = 220;
+
+logo_width = logo.GetWidth();
+logo_height = logo.GetHeight();
+
+scale = 1.0;
+
+if (logo_width > max_width) {
+    scale = max_width / logo_width;
+}
+
+if (logo_height * scale > max_height) {
+    scale = max_height / logo_height;
+}
+
+logo = logo.Scale(
+    logo_width * scale,
+    logo_height * scale
+);
+
+logo_width = logo.GetWidth();
+logo_height = logo.GetHeight();
+
+logo_x = (screen_width - logo_width) / 2;
+logo_y = (screen_height - logo_height) / 2;
+
+logo_sprite = Sprite(logo);
+logo_sprite.SetX(logo_x);
+logo_sprite.SetY(logo_y);
+logo_sprite.SetZ(100);

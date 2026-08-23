@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+echo "======================================"
+echo " AlphaOS GRUB EFI diagnostic"
+echo "======================================"
+
+echo "--- grub-install ---"
+command -v grub-install
+grub-install --version
+
+echo "--- packages ---"
+dpkg-query -W -f='${Package} ${Version}\n' \
+    grub-common \
+    grub2-common \
+    grub-efi-amd64 \
+    grub-efi-amd64-bin \
+    efibootmgr
+
+echo "--- EFI GRUB modules ---"
+ls -ld /usr/lib/grub/x86_64-efi
+
+echo "======================================"

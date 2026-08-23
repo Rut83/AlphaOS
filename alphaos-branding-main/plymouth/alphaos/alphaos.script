@@ -1,0 +1,22 @@
+# Minimal Plymouth script theme: dark background, centered logo, spinner dots.
+Window.SetBackgroundTopColor(0.07, 0.09, 0.15);
+Window.SetBackgroundBottomColor(0.03, 0.05, 0.08);
+
+logo.image = Image("plymouth-logo.png");
+logo.sprite = Sprite(logo.image);
+logo.sprite.SetX(Window.GetWidth() / 2 - logo.image.GetWidth() / 2);
+logo.sprite.SetY(Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
+
+# Simple progress dots under the logo
+dot_count = 0;
+fun refresh_callback() {
+  dot_count = (dot_count + 1) % 40;
+  message = "";
+  i = 0;
+  while (i < dot_count / 10) {
+    message += ".";
+    i++;
+  }
+  Plymouth.SetMessage(message);
+}
+Plymouth.SetRefreshFunction(refresh_callback);

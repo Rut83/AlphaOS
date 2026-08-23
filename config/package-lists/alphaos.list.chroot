@@ -47,3 +47,12 @@ ntfs-3g
 udisks2
 polkitd
 pkexec
+plymouth
+plymouth-themes
+
+# EFI bootloader support
+grub-efi-amd64
+grub-efi-amd64-bin
+grub2-common
+efibootmgr
+grub-common

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=AlphaOS
+Description=AlphaOS boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/alphaos
+ScriptFile=/usr/share/plymouth/themes/alphaos/alphaos.script

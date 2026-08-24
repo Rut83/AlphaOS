@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=AlphaOS Wallpaper
-Comment=Set the AlphaOS desktop wallpaper
-Exec=/usr/local/bin/alphaos-set-wallpaper
-Terminal=false
-OnlyShowIn=XFCE;
-X-GNOME-Autostart-enabled=true
-NoDisplay=true

@@ -1,0 +1,33 @@
+#!/bin/sh
+set -eu
+
+GRUB_DIR="/boot/grub"
+ALPHA_DIR="/usr/share/alphaos/grub"
+
+[ -d "$GRUB_DIR" ] || exit 0
+[ -f "$ALPHA_DIR/grub-background.png" ] || exit 0
+
+# Install AlphaOS GRUB background.
+install -m 0644 \
+    "$ALPHA_DIR/grub-background.png" \
+    "$GRUB_DIR/splash.png"
+
+# Use AlphaOS splash in the generated GRUB theme.
+if [ -f "$GRUB_DIR/live-theme/theme.txt" ]; then
+    sed -i \
+        's#^desktop-image:.*#desktop-image: "../../splash.png"#' \
+        "$GRUB_DIR/live-theme/theme.txt"
+fi
+
+# Remove obsolete AlphaOS/old branding files if present.
+rm -f "$GRUB_DIR/grub-background.png"
+rm -f "$GRUB_DIR/debian.png"
+rm -f "$GRUB_DIR/debian.svg"
+rm -f "$GRUB_DIR/splash.svg"
+
+# Regenerate installed GRUB configuration.
+if command -v update-grub >/dev/null 2>&1; then
+    update-grub
+fi
+
+exit 0

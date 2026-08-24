@@ -1,29 +1,21 @@
 #!/bin/sh
 set -eu
-install -d -m 0755 /etc/alphaos
-cat > /etc/alphaos/release <<'EOR'
-NAME=AlphaOS
-ID=alphaos
-ID_LIKE=debian
-VERSION_ID=1.0
-PRETTY_NAME="AlphaOS 1.0"
-HOME_URL="https://alphaos.dev"
-EOR
-if [ -f /etc/os-release ]; then
-  sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="AlphaOS 1.0"/' /etc/os-release || true
-  sed -i 's/^ID=.*/ID=alphaos/' /etc/os-release || true
-  grep -q '^ID_LIKE=' /etc/os-release || printf 'ID_LIKE=debian\n' >> /etc/os-release
-fi
-cat > /etc/motd <<'EOM'
-AlphaOS 1.0
 
-Fast. Secure. Private.
-EOM
-install -d -m 0755 /etc/lightdm/lightdm.conf.d
-cat > /etc/lightdm/lightdm.conf.d/50-alphaos.conf <<'EOL'
-[Seat:*]
-greeter-session=lightdm-gtk-greeter
-user-session=xfce
-autologin-user=alpha
-autologin-user-timeout=0
+mkdir -p /etc/alphaos
+
+cat > /etc/alphaos/live-session.conf <<'EOL'
+DESKTOP=kde
+DISPLAY_MANAGER=sddm
 EOL
+
+mkdir -p /etc/sddm.conf.d
+
+cat > /etc/sddm.conf.d/10-alphaos.conf <<'EOL'
+[Autologin]
+User=alpha
+Session=plasma.desktop
+Relogin=false
+EOL
+
+rm -rf /etc/lightdm
+

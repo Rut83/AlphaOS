@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+
+apt-get remove -y unwanted-package || true
+apt-get autoremove -y || true

@@ -1,5 +1,11 @@
 #!/bin/sh
 set -eu
-# Keep live-build's generated GRUB logic intact. Branding assets can be added here
-# without hard-coding an installed-disk UUID.
-exit 0
+
+GRUB_DIR="${LB_BINARY:-binary}/boot/grub"
+
+if [ ! -f "$GRUB_DIR/splash.png" ]; then
+    echo "ERROR: AlphaOS GRUB splash.png missing."
+    exit 1
+fi
+
+echo "AlphaOS: GRUB splash installed."

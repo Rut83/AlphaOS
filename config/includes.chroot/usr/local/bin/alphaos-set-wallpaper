@@ -1,0 +1,38 @@
+#!/bin/sh
+
+WALLPAPER="/usr/share/backgrounds/alphaos/alphaos-wallpaper.png"
+
+[ -f "$WALLPAPER" ] || exit 0
+command -v xfconf-query >/dev/null 2>&1 || exit 0
+
+# Give xfdesktop/xfconf time to finish starting.
+sleep 2
+
+# Set every existing XFCE wallpaper path to AlphaOS.
+xfconf-query -c xfce4-desktop -l 2>/dev/null |
+while IFS= read -r property; do
+    case "$property" in
+        */image-path)
+            xfconf-query -c xfce4-desktop \
+                -p "$property" \
+                -s "$WALLPAPER" 2>/dev/null || true
+            ;;
+    esac
+done
+
+# Make sure wallpaper display is enabled.
+xfconf-query -c xfce4-desktop \
+    -p /backdrop/screen0/monitor0/workspace0/image-show \
+    -s true 2>/dev/null || true
+
+# Scaled/zoomed wallpaper.
+xfconf-query -c xfce4-desktop \
+    -p /backdrop/screen0/monitor0/workspace0/image-style \
+    -s 5 2>/dev/null || true
+
+# Restart xfdesktop so the new wallpaper is immediately displayed.
+if command -v xfdesktop >/dev/null 2>&1; then
+    xfdesktop --reload 2>/dev/null || true
+fi
+
+exit 0

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=AlphaOS Wallpaper
-Comment=Set the AlphaOS default KDE wallpaper
-Exec=/usr/local/bin/alphaos-kde-wallpaper
-Terminal=false
-NoDisplay=true
-X-GNOME-Autostart-enabled=true

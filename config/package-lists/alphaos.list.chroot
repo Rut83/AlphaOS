@@ -1,205 +1,37 @@
-# AlphaOS desktop
+# ============================================================
+# AlphaOS Base
+# ============================================================
+
 live-boot
 live-config
 systemd-sysv
-network-manager
-network-manager-gnome
-sudo
 locales
 keyboard-configuration
 console-setup
+sudo
 
-thunar
-thunar-archive-plugin
-thunar-volman
+# ============================================================
+# KDE Plasma
+# ============================================================
 
-# Applications
-firefox-esr
-mousepad
-ristretto
+kde-plasma-desktop
+sddm
 
+# ============================================================
 # Installer
+# ============================================================
+
 calamares
 calamares-settings-debian
 
-# Hardware / tools
-firmware-linux
-firmware-linux-nonfree
-fastfetch
-curl
-wget
-ca-certificates
-pciutils
-usbutils
-lshw
-parted
-gdisk
-dosfstools
-e2fsprogs
-btrfs-progs
-ntfs-3g
-udisks2
-polkitd
-pkexec
-plymouth
-plymouth-themes
-
-# EFI bootloader support
-grub-efi-amd64
-grub-efi-amd64-bin
-grub2-common
-efibootmgr
-grub-common
-
 # ============================================================
-# AlphaOS LXQt Desktop
-# ============================================================
-
-
-# Display manager
-
-# ============================================================
-# Desktop integration normally pulled by Recommends
-# ============================================================
-
-dbus-x11
-udisks2
-udisks2-btrfs
-udisks2-lvm2
-gvfs
-gvfs-backends
-gvfs-fuse
-gvfs-daemons
-udisks2
-polkitd
-pkexec
-upower
-acpid
-accountsservice
-xdg-utils
-xdg-user-dirs
-xdg-user-dirs-gtk
-shared-mime-info
-desktop-file-utils
-hicolor-icon-theme
-adwaita-icon-theme
-
-# ============================================================
-# Networking
+# Desktop / System Integration
 # ============================================================
 
 network-manager
 network-manager-gnome
-wpasupplicant
-wireless-tools
-iw
-iproute2
-iputils-ping
-dnsutils
-net-tools
-curl
-wget
-openssh-client
-
-# ============================================================
-# Hardware / removable media
-# ============================================================
-
-pciutils
-usbutils
-lshw
-hwinfo
-inxi
-dmidecode
-smartmontools
-acpi
-acpid
-
-# ============================================================
-# Filesystems / partitioning
-# ============================================================
-
-dosfstools
-exfatprogs
-ntfs-3g
-e2fsprogs
-btrfs-progs
-xfsprogs
-parted
-gparted
-
-# ============================================================
-# Archive support
-# ============================================================
-
-tar
-gzip
-bzip2
-xz-utils
-zip
-unzip
-p7zip-full
-zstd
-lz4
-
-# ============================================================
-# Basic system utilities
-# ============================================================
-
-sudo
-bash-completion
-less
-nano
-vim
-file
-which
-tree
-rsync
-procps
-psmisc
-htop
-btop
-grep
-sed
-gawk
-findutils
-coreutils
-
-# ============================================================
-# Development / useful CLI tools
-# ============================================================
-
-git
-build-essential
-pkg-config
-cmake
-make
-gcc
-g++
-python3
-python3-pip
-python3-venv
-jq
-ripgrep
-fd-find
-
-# ============================================================
-# AlphaOS system information
-# ============================================================
-
-fastfetch
-
-# ============================================================
-# AlphaOS LXQt desktop
-# ============================================================
-
-
-# ============================================================
-# Desktop integration
-# ============================================================
-
-dbus-x11
 dbus-user-session
+dbus-x11
 udisks2
 udisks2-btrfs
 udisks2-lvm2
@@ -221,11 +53,9 @@ adwaita-icon-theme
 fonts-dejavu
 
 # ============================================================
-# Network
+# Networking
 # ============================================================
 
-network-manager
-network-manager-gnome
 wpasupplicant
 wireless-tools
 iw
@@ -233,15 +63,17 @@ iproute2
 iputils-ping
 dnsutils
 net-tools
-traceroute
 curl
 wget
+ca-certificates
 openssh-client
 
 # ============================================================
 # Hardware
 # ============================================================
 
+firmware-linux
+firmware-linux-nonfree
 pciutils
 usbutils
 lshw
@@ -254,7 +86,7 @@ acpid
 lm-sensors
 
 # ============================================================
-# Storage / filesystems
+# Filesystems / Storage
 # ============================================================
 
 dosfstools
@@ -265,34 +97,32 @@ btrfs-progs
 xfsprogs
 parted
 gparted
-gvfs-backends
+gdisk
 
 # ============================================================
 # Archives
 # ============================================================
 
-zip
-unzip
-p7zip-full
 tar
 gzip
 bzip2
 xz-utils
+zip
+unzip
+p7zip-full
 zstd
 lz4
 
 # ============================================================
-# Basic CLI tools
+# System Utilities
 # ============================================================
 
-sudo
 bash-completion
 less
 nano
 vim
 file
 which
-tree
 rsync
 procps
 psmisc
@@ -304,9 +134,12 @@ gawk
 coreutils
 diffutils
 patch
+tree
+htop
+btop
 
 # ============================================================
-# Development / administration
+# Development / Administration
 # ============================================================
 
 git
@@ -324,20 +157,25 @@ ripgrep
 fd-find
 
 # ============================================================
-# System information
+# AlphaOS
 # ============================================================
 
 fastfetch
-htop
-btop
-
-
-# Universal wallpaper backend
 xwallpaper
 
 # ============================================================
-# AlphaOS KDE Plasma
+# Bootloader
 # ============================================================
 
-kde-plasma-desktop
-sddm
+grub-efi-amd64
+grub-efi-amd64-bin
+grub2-common
+grub-common
+efibootmgr
+
+# ============================================================
+# Boot Splash
+# ============================================================
+
+plymouth
+plymouth-themes

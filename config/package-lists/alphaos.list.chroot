@@ -1,58 +1,181 @@
-# AlphaOS desktop
+# ============================================================
+# AlphaOS Base
+# ============================================================
+
 live-boot
 live-config
 systemd-sysv
-network-manager
-network-manager-gnome
-sudo
 locales
 keyboard-configuration
 console-setup
+sudo
 
-# XFCE desktop
-xfce4
-xfce4-goodies
-xfce4-terminal
-thunar
-thunar-archive-plugin
-thunar-volman
-lightdm
-lightdm-gtk-greeter
+# ============================================================
+# KDE Plasma
+# ============================================================
 
-# Applications
-firefox-esr
-mousepad
-ristretto
+kde-plasma-desktop
+sddm
 
+# ============================================================
 # Installer
+# ============================================================
+
 calamares
 calamares-settings-debian
 
-# Hardware / tools
-firmware-linux
-firmware-linux-nonfree
-fastfetch
+# ============================================================
+# Desktop / System Integration
+# ============================================================
+
+network-manager
+network-manager-gnome
+dbus-user-session
+dbus-x11
+udisks2
+udisks2-btrfs
+udisks2-lvm2
+gvfs
+gvfs-backends
+gvfs-daemons
+gvfs-fuse
+upower
+polkitd
+pkexec
+accountsservice
+xdg-utils
+xdg-user-dirs
+xdg-user-dirs-gtk
+shared-mime-info
+desktop-file-utils
+hicolor-icon-theme
+adwaita-icon-theme
+fonts-dejavu
+
+# ============================================================
+# Networking
+# ============================================================
+
+wpasupplicant
+wireless-tools
+iw
+iproute2
+iputils-ping
+dnsutils
+net-tools
 curl
 wget
 ca-certificates
+openssh-client
+
+# ============================================================
+# Hardware
+# ============================================================
+
+firmware-linux
+firmware-linux-nonfree
 pciutils
 usbutils
 lshw
-parted
-gdisk
+hwinfo
+inxi
+dmidecode
+smartmontools
+acpi
+acpid
+lm-sensors
+
+# ============================================================
+# Filesystems / Storage
+# ============================================================
+
 dosfstools
+exfatprogs
+ntfs-3g
 e2fsprogs
 btrfs-progs
-ntfs-3g
-udisks2
-polkitd
-pkexec
-plymouth
-plymouth-themes
+xfsprogs
+parted
+gparted
+gdisk
 
-# EFI bootloader support
+# ============================================================
+# Archives
+# ============================================================
+
+tar
+gzip
+bzip2
+xz-utils
+zip
+unzip
+p7zip-full
+zstd
+lz4
+
+# ============================================================
+# System Utilities
+# ============================================================
+
+bash-completion
+less
+nano
+vim
+file
+which
+rsync
+procps
+psmisc
+util-linux
+findutils
+grep
+sed
+gawk
+coreutils
+diffutils
+patch
+tree
+htop
+btop
+
+# ============================================================
+# Development / Administration
+# ============================================================
+
+git
+build-essential
+pkg-config
+cmake
+make
+gcc
+g++
+python3
+python3-pip
+python3-venv
+jq
+ripgrep
+fd-find
+
+# ============================================================
+# AlphaOS
+# ============================================================
+
+fastfetch
+xwallpaper
+
+# ============================================================
+# Bootloader
+# ============================================================
+
 grub-efi-amd64
 grub-efi-amd64-bin
 grub2-common
-efibootmgr
 grub-common
+efibootmgr
+
+# ============================================================
+# Boot Splash
+# ============================================================
+
+plymouth
+plymouth-themes
